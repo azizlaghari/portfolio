@@ -1,0 +1,144 @@
+.testimonials {
+  margin-bottom: 30px;
+}
+.testimonials ul {
+  list-style-type: none;
+}
+
+.testimonials-title {
+  margin-bottom: 20px;
+}
+
+.testimonials-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0 -32px;
+  padding: 25px 40px;
+  padding-bottom: 35px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.testimonials-item {
+  min-width: 50%;
+  scroll-snap-align: center;
+}
+/* .testimonials-item .content-card {
+  position: relative;
+  box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+
+} */
+.has-scrollbar::-webkit-scrollbar {
+  width: 5px; /* for vertical scrollbar */
+  height: 5px; /* for horizontal scrollbar */
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+  width: 100px;
+}
+
+.testimonials-item .content-card {
+  position: relative;
+  background: var(--backgroundLite);
+  /* background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%); */
+  padding: 15px;
+  padding-top: 45px;
+  border-radius: 14px;
+  box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  /* background: var(--backgroundLite); */
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+}
+
+.testimonials-avatar-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(15px, -25px);
+  background: var(--backgroundLite);
+  border-radius: 14px;
+  box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+}
+
+.testimonials-item-title {
+  margin-bottom: 7px;
+}
+
+.testimonials-text {
+  color: var(--textColor);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Number of lines to show before adding ellipsis */
+}
+.modal-content-card {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+.modal-content-card .left .modal-avatar-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.modal-content-card .right .modal-item-title {
+  font-size: 22px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+.modal-content-card .right .modal-text {
+  font-size: 14px;
+  color: var(--textColor);
+}
+.avatarBox {
+  background: var(--backgroundLite);
+  border-radius: 14px;
+  box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+}
+.TESTIMONIAL_MODAL .ant-modal-content {
+  background-color: var(--background) !important;
+  border: 1px solid var(--borderColor);
+}

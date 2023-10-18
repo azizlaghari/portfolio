@@ -1,0 +1,36 @@
+.main-content {
+  background-color: var(--backgroundLite) !important;
+  width: 100%;
+
+}
+.ant-layout-header {
+  background-color: var(--background) !important;
+  min-height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 6;
+  padding: 0 30px;
+}
+
+.v-layout {
+  display: block;
+}
+.m-layout {
+  display: none;
+}
+
+/* .ant-drawer-body {
+  background-color: var(--sidebar) !important;
+} */
+
+@media (max-width: 800px) {
+  .v-layout {
+    display: inline;
+  }
+  .m-layout {
+    display: none;
+    background-color: var(--background);
+  }
+}

@@ -1,0 +1,28 @@
+/* Third Party CSS */
+
+/* Theme CSS */
+@import './_general.css';
+@import './_antd.css';
+
+/* Layout CSS */
+@import './layout/verticalLayout.css';
+@import './layout/MainMenu.css';
+@import './layout/layout.css';
+@import './layout/mobileLayout.css';
+
+/* Component CSS */
+@import './components/table.css';
+@import './components/SideBar.css';
+@import './components/Service.css';
+@import './components/Testimonials.css';
+@import './components/Client.css';
+@import './components/Navbar.css';
+@import './components/HorizontalSideBar.css';
+
+/* Page CSS */
+@import './pages/login.css';
+@import './pages/About.css';
+@import './pages/Portfolio.css';
+@import './pages/Blog.css';
+@import './pages/Contact.css';
+@import './pages/Resume.css';

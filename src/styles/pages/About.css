@@ -1,0 +1,33 @@
+.about .article-title {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 30px;
+  font-size: var(--fs1);
+}
+
+.about .article-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+}
+.about .article-title {
+  margin-bottom: 15px;
+}
+
+.about-text {
+  color: var(--textColor);
+  font-size: 14;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+

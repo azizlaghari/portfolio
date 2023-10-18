@@ -1,0 +1,62 @@
+.service {
+  margin-bottom: 35px;
+}
+.service ul {
+  list-style-type: none;
+  padding: 0;
+}
+.service-title {
+  margin-bottom: 20px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.service-item {
+  position: relative;
+  background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--backgroundLite);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.service-icon-box {
+  margin-bottom: 10px;
+}
+
+.service-icon-box img {
+  margin: auto;
+}
+
+.service-content-box {
+  text-align: left;
+}
+
+.service-item-title {
+  margin-bottom: 7px;
+  font-size: 18px;
+}
+
+.service-item-text {
+  color: var(--textColor);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+}

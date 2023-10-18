@@ -1,0 +1,36 @@
+.clients {
+  margin-bottom: 15px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px;
+  padding-bottom: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 20px;
+}
+
+.clients-item {
+  min-width: 25%;
+  list-style-type: none;
+  scroll-snap-align: start;
+}
+
+.clients-item img {
+  color: red;
+  width: 100%;
+  filter: var(--filterVariable);
+  /* filter: grayscale(1); */
+  transition: 0.25s ease;
+}
+
+.clients-item img:hover {
+  filter: grayscale(0);
+}
