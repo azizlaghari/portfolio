@@ -43,7 +43,7 @@
 }
 
 .info_more-btn::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 1px;
   border-radius: inherit;
@@ -51,10 +51,10 @@
   transition: var(--transition-1);
   z-index: -1;
 }
-.info_more-btn .iconBTN{
+.info_more-btn .iconBTN {
   display: none;
 }
-.info_more-btn .textBTN{
+.info_more-btn .textBTN {
   display: inline;
 }
 
@@ -73,11 +73,11 @@
   .HorizontalSideBar {
     margin: 1rem;
   }
-  .info_more-btn .iconBTN{
+  .info_more-btn .iconBTN {
     display: inline;
     width: 60px;
   }
-  .info_more-btn .textBTN{
+  .info_more-btn .textBTN {
     display: none;
   }
 }

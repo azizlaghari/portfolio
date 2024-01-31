@@ -12,16 +12,15 @@ export const light = {
   btnColor: '#d6d6d6b3',
   btnColorLite: '#d6d6d6',
 
-
   // fonts size variables
 
-  fs1: "32px",
-  fs2: "24px",
-  fs3: "26px",
-  fs4: "18px",
-  fs6: "15px",
-  fs7: "15px",
-  fs8: "px",
+  fs1: '32px',
+  fs2: '24px',
+  fs3: '26px',
+  fs4: '18px',
+  fs6: '15px',
+  fs7: '15px',
+  fs8: 'px',
 
   // not working
   secondary: '#B85B22',
@@ -67,16 +66,15 @@ export const dark = {
   textColorOP: '#000',
   navbarBGColor: '#2b2b2cbf',
 
-
   // fonts size variables
 
-  fs1: "32px",
-  fs2: "24px",
-  fs3: "26px",
-  fs4: "18px",
-  fs6: "15px",
-  fs7: "15px",
-  fs8: "px",
+  fs1: '32px',
+  fs2: '24px',
+  fs3: '26px',
+  fs4: '18px',
+  fs6: '15px',
+  fs7: '15px',
+  fs8: 'px',
   // not working
 
   secondary: '#B85B22',

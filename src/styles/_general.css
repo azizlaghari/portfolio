@@ -42,15 +42,15 @@ p {
   color: var(--textColor);
   text-transform: capitalize;
 }
-.h1{
+.h1 {
   font-size: 32px;
 }
-.h2{
+.h2 {
   font-size: 24px;
 }
-.h3{
+.h3 {
   font-size: 26px;
 }
-.h5{
+.h5 {
   font-size: 13px;
 }

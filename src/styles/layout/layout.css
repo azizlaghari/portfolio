@@ -1,7 +1,6 @@
 .main-content {
   background-color: var(--backgroundLite) !important;
   width: 100%;
-
 }
 .ant-layout-header {
   background-color: var(--background) !important;

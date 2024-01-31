@@ -29,17 +29,16 @@
 .about-text p {
   margin-bottom: 15px;
 }
-.skills h2{
-  margin: .5rem 0;
+.skills h2 {
+  margin: 0.5rem 0;
 }
 
- .skills p{
-  margin: .5rem 0;
+.skills p {
+  margin: 0.5rem 0;
 }
-.skills .fontLarge{
+.skills .fontLarge {
   font-size: 26px;
 }
- .margenTop{
+.margenTop {
   margin-top: 2rem;
-
 }

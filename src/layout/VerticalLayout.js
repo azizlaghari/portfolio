@@ -46,7 +46,7 @@ const VerticalLayout = ({ children }) => {
           <MainMenu active={active} />
         </Sider> */}
 
-        <div className='layout-contant' style={{ position: 'relative', minHeight: '100vh' }} >
+        <div className='layout-contant' style={{ position: 'relative', minHeight: '100vh' }}>
           <div className='verticalSideBar'>
             <SideBar />
           </div>
@@ -76,7 +76,6 @@ const VerticalLayout = ({ children }) => {
             <Navbar />
           </div>
         </div>
-
       </Layout>
     </div>
   )

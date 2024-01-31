@@ -4,48 +4,44 @@ import avatar2 from './../assets/images/avatar-2.png'
 import avatar3 from './../assets/images/avatar-3.png'
 import avatar4 from './../assets/images/avatar-4.png'
 import quoteIcon from './../assets/images/icon-quote.svg'
-import { Modal } from 'antd';
-
+import { Modal } from 'antd'
 
 const Testimonials = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null)
   const showModal = (data) => {
-    setIsModalOpen(true);
+    setIsModalOpen(true)
     setSelectedTestimonial(data)
-
-  };
+  }
   const handleOk = () => {
-    setIsModalOpen(false);
+    setIsModalOpen(false)
     setSelectedTestimonial(null)
-
-  };
+  }
   const handleCancel = () => {
-    setIsModalOpen(false);
+    setIsModalOpen(false)
     setSelectedTestimonial(null)
-
-  };
+  }
   const testimonialsData = [
     {
       avatar: avatar1,
       title: 'Daniel lewis',
-      text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
     },
     {
       avatar: avatar2,
       title: 'Jessica miller',
-      text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
     },
     {
       avatar: avatar3,
       title: 'Emily evans',
-      text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+      text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
     },
     {
       avatar: avatar4,
       title: 'Henry william',
-      text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
-    }
+      text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+    },
   ]
   return (
     <div>
@@ -75,9 +71,16 @@ const Testimonials = () => {
             </li>
           ))}
         </ul>
-
       </section>
-      <Modal className='TESTIMONIAL_MODAL' footer={null} centered title="" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal
+        className='TESTIMONIAL_MODAL'
+        footer={null}
+        centered
+        title=''
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
         <div className='modal-content-card' data-testimonials-item>
           <div className='left'>
             <figure className='modal-avatar-box '>
@@ -99,7 +102,6 @@ const Testimonials = () => {
               <p>{selectedTestimonial?.text}</p>
             </div>
           </div>
-
         </div>
       </Modal>
     </div>
