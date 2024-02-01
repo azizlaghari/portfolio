@@ -29,15 +29,15 @@
 .about-text p {
   margin-bottom: 15px;
 }
-.skills h2 {
-  margin: 0.5rem 0;
+.skills h4 {
+  padding-bottom: 0.2rem;
 }
 
 .skills p {
-  margin: 0.5rem 0;
+  padding-bottom: .5rem;
 }
 .skills .fontLarge {
-  font-size: 26px;
+  font-size: 20px;
 }
 .margenTop {
   margin-top: 2rem;

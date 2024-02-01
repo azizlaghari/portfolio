@@ -50,19 +50,19 @@ const About = () => {
           <h2>Skills:</h2>
           <h4>Frontend Development:</h4>
           <p>React, Next.js, Gatsby.js, Angular, Vue.js HTML5, CSS3, SASS/LESS, Tailwind CSS</p>
-          <h2>API Integration:</h2>
+          <h4>API Integration:</h4>
           <p>RESTful, GraphQL</p>
-          <h2>Version Control:</h2>
+          <h4>Version Control:</h4>
           <p>Git</p>
-          <h2>Testing:</h2>
+          <h4>Testing:</h4>
           <p>Jest, Mocha, Chai</p>
-          <h2>Deployment:</h2>
+          <h4>Deployment:</h4>
           <p>Heroku, AWS, Netlify</p>
-          <h2>Backend Development:</h2>
+          <h4>Backend Development:</h4>
           <p>Node.js, Express.js, Nest.js, Laravel, Django</p>
-          <h2>Content Management Systems (CMS):</h2>
+          <h4>Content Management Systems (CMS):</h4>
           <p>WordPress, Webflow</p>
-          <h2>E-commerce:</h2>
+          <h4>E-commerce:</h4>
           <p>Shopify</p>
           <h3 className='fontLarge margenTop'>Database:</h3>
           <p>

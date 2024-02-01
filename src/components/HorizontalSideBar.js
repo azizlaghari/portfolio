@@ -26,7 +26,7 @@ const HorizontalSideBar = () => {
             <h1 className='name' title='Richard hanrick'>
               Shahir Aslam
             </h1>
-            <p className='title'>Senior Web developer & Graphi Designer Enthusiast</p>
+            <p className='title'>Senior Web developer & Graphic Designer Enthusiast</p>
           </div>
           <button className='info_more-btn' onClick={toggleContent} data-sidebar-btn>
             <span className='textBTN'>Show Contacts</span>

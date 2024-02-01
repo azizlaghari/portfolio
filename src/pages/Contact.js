@@ -1,8 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../layout/Layout'
 import { BsFillSendFill } from 'react-icons/bs'
+import axios from 'axios'
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value,
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+      const API_ENDPOINT = 'https://backend.trackkrr.com/contact'
+      await axios.post(API_ENDPOINT, formData)
+      console.log('Form submitted successfully!')
+    } catch (error) {
+      console.error('Error submitting form:', error)
+    }
+  }
+
   return (
     <Layout>
       <div>
@@ -27,36 +54,43 @@ const Contact = () => {
           <section className='contact-form'>
             <h3 className='h3 form-title'>Contact Form</h3>
 
-            <form action='#' className='form' data-form>
+            <form onSubmit={handleSubmit} className='form' data-form>
               <div className='input-wrapper'>
                 <input
                   type='text'
-                  name='fullname'
+                  name='name'
+                  value={formData.name}
                   className='form-input'
                   placeholder='Full name'
                   required
                   data-form-input
+                  onChange={handleChange}
                 />
 
                 <input
                   type='email'
                   name='email'
+                  value={formData.email}
                   className='form-input'
                   placeholder='Email address'
                   required
                   data-form-input
+                  onChange={handleChange}
                 />
               </div>
 
               <textarea
                 name='message'
+                type='message'
+                value={formData.message}
                 className='form-input'
                 placeholder='Your Message'
                 required
                 data-form-input
+                onChange={handleChange}
               ></textarea>
 
-              <button className='form-btn' type='submit' disabled data-form-btn>
+              <button className='form-btn' type='submit' data-form-btn>
                 <BsFillSendFill />
                 <span>Send Message</span>
               </button>

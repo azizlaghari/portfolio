@@ -18,7 +18,7 @@ const Routers = () => {
         {/* <Route element={<PrivateWrapper />}> */}
         <Route path='/' element={<About />} />
         <Route path='/about' element={<About />} />
-        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/portfolio/:type' element={<Portfolio />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/resume' element={<Resume />} />

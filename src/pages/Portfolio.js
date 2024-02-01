@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Image } from 'antd'
 import Layout from '../layout/Layout'
 import project1 from '../assets/images/project-1.png'
@@ -10,9 +10,18 @@ import project6 from '../assets/images/project-6.png'
 import project7 from '../assets/images/project-7.png'
 import project8 from '../assets/images/project-8.jpg'
 import project9 from '../assets/images/project-9.png'
+import project10 from '../assets/images/project-10.png'
 import { AiOutlineEye } from 'react-icons/ai'
+import { useParams, useNavigate } from 'react-router-dom'
 
 const Portfolio = () => {
+  const navigate = useNavigate()
+  const [selectedCategory, setSelectedCategory] = useState('All')
+
+  const params = useParams()
+  const { id } = params
+  console.log('id :', id)
+
   const portfolioData = [
     {
       id: 'project1',
@@ -53,8 +62,10 @@ const Portfolio = () => {
     {
       id: 'project7',
       image: project7,
-      title: 'Summary',
+      title: '99 Logos',
       category: 'Web development',
+      link: 'https://logos-cd879.web.app/',
+      // link: <a href='https://logos-cd879.web.app/'></a>
     },
     {
       id: 'project8',
@@ -65,20 +76,38 @@ const Portfolio = () => {
     {
       id: 'project9',
       image: project9,
-      title: 'Arrival',
+      title: 'Competitor Yeti',
       category: 'Web development',
+      link: 'https://competitor-yeti-1.web.app/',
+    },
+    {
+      id: 'project10',
+      image: project10,
+      title: 'Fitness Trainer',
+      category: 'Web development',
+      link: 'https://fitness-trainer-1.web.app/',
     },
   ]
 
-  const [selectedCategory, setSelectedCategory] = useState('All')
-
-  const handleFilterClick = (category) => {
-    setSelectedCategory(category)
-  }
+  useEffect(() => {
+    const localPath = window.location.pathname
+    if (localPath.includes('all')) {
+      setSelectedCategory('All')
+    } else if (localPath.includes('web-design')) {
+      setSelectedCategory('Web design')
+    } else if (localPath.includes('web-development')) {
+      setSelectedCategory('Web development')
+    } else if (localPath.includes('graphic-design')) {
+      setSelectedCategory('Graphic Design')
+    } else if (localPath.includes('applications')) {
+      setSelectedCategory('Applications')
+    }
+  }, [])
 
   const handleFilterChange = (e) => {
     setSelectedCategory(e.target.value)
   }
+
   const filteredProjects =
     selectedCategory === 'All'
       ? portfolioData
@@ -98,7 +127,11 @@ const Portfolio = () => {
                 <button
                   className={selectedCategory === 'All' ? 'active' : ''}
                   data-filter-btn
-                  onClick={() => handleFilterClick('All')}
+                  // onClick={() => handleFilterClick('All')}
+                  onClick={() => {
+                    navigate('/portfolio/all')
+                    setSelectedCategory('All')
+                  }}
                 >
                   All
                 </button>
@@ -107,7 +140,11 @@ const Portfolio = () => {
                 <button
                   className={selectedCategory === 'Web design' ? 'active' : ''}
                   data-filter-btn
-                  onClick={() => handleFilterClick('Web design')}
+                  // onClick={() => handleFilterClick('Web design')}
+                  onClick={() => {
+                    navigate('/portfolio/web-design')
+                    setSelectedCategory('Web design')
+                  }}
                 >
                   Web design
                 </button>
@@ -116,7 +153,10 @@ const Portfolio = () => {
                 <button
                   className={selectedCategory === 'Applications' ? 'active' : ''}
                   data-filter-btn
-                  onClick={() => handleFilterClick('Applications')}
+                  onClick={() => {
+                    navigate('/portfolio/applications')
+                    setSelectedCategory('Applications')
+                  }}
                 >
                   Applications
                 </button>
@@ -125,7 +165,10 @@ const Portfolio = () => {
                 <button
                   className={selectedCategory === 'Web development' ? 'active' : ''}
                   data-filter-btn
-                  onClick={() => handleFilterClick('Web development')}
+                  onClick={() => {
+                    navigate('/portfolio/web-development')
+                    setSelectedCategory('Web development')
+                  }}
                 >
                   Web development
                 </button>
@@ -134,7 +177,10 @@ const Portfolio = () => {
                 <button
                   className={selectedCategory === 'Graphic Design' ? 'active' : ''}
                   data-filter-btn
-                  onClick={() => handleFilterClick('Graphic Design')}
+                  onClick={() => {
+                    navigate('/portfolio/graphic-design')
+                    setSelectedCategory('Graphic Design')
+                  }}
                 >
                   Graphic Design
                 </button>
@@ -176,15 +222,21 @@ const Portfolio = () => {
                                                 <AiOutlineEye />
                                             </div> */}
                     <Image
-                      width={'400px'}
+                      width={'100%'}
                       height={'300px'}
                       src={project.image}
                       alt={project.title}
                       loading='lazy'
+                      style={{ borderRadius: '20px', objectFit: 'fill' }}
                     />
                   </span>
                   <h3 className='project-title'>{project.title}</h3>
                   <p className='project-category'>{project.category}</p>
+                  <p className='project-link'>
+                    <a target='_blank' rel='noreferrer' href={project?.link}>
+                      {project.link}
+                    </a>
+                  </p>
                   {/* </a> */}
                 </li>
               ))}

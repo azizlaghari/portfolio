@@ -11,7 +11,7 @@ const Service = () => {
   return (
     <div>
       <section className='service'>
-        <h3 className='h3 service-title'>What i&apos;m doing</h3>
+        <h2 className='service-title'>What i&apos;m doing</h2>
         <ul className='service-list'>
           <Row gutter={[20, 20]}>
             <Col xl={12} lg={12} sm={24} xs={24}>

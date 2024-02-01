@@ -20,7 +20,7 @@ const SideBar = () => {
             Shahir Aslam
           </h1>
           <p className='title' style={{ textAlign: 'center' }}>
-            Senior Web developer & Graphi Designer Enthusiast
+            Senior Web developer & Graphic Designer Enthusiast
           </p>
         </div>
 

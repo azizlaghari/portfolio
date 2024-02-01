@@ -160,10 +160,12 @@
   background: transparent;
   z-index: 1;
   transition: var(--transition-1);
+  border-radius: 16px;
 }
 
 .project-item > a:hover .project-img::before {
   background: hsla(0, 0%, 0%, 0.5);
+  border-radius: 16px;
 }
 
 .project-item-icon-box {
@@ -197,6 +199,7 @@
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
+  cursor: pointer;
 }
 
 .project-item > a:hover img {
@@ -208,12 +211,18 @@
   margin-left: 10px;
 }
 
+.project-title,
+.project-link {
+  margin-left: 10px;
+}
+
 .project-title {
   color: var(--textColor);
   font-size: 14px;
   font-weight: 400;
   text-transform: capitalize;
   line-height: 1.3;
+  margin-top: .5rem;
 }
 
 .project-category {
@@ -221,6 +230,12 @@
   font-size: 16px;
   font-weight: 300;
   opacity: 60%;
+}
+.project-link {
+  /* color: var(--textColor); */
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 90%;
 }
 .project-list,
 .blog-posts-list {

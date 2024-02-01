@@ -49,11 +49,11 @@ const Navbar = () => {
             <button
               style={{ cursor: 'pointer' }}
               className={`tablinks ${
-                window.location.pathname == '/portfolio' ? 'active' : 'inactive'
+                window.location.pathname?.includes('portfolio') == true ? 'active' : 'inactive'
               } navbar-link`}
               data-nav-link
             >
-              <Link to='/portfolio'>Portfolio</Link>
+              <Link to='/portfolio/all'>Portfolio</Link>
             </button>
           </li>
 
